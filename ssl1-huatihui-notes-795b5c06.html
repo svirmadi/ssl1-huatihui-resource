@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引与信息整理 · hth 介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f6f0;
+            font-family: "Georgia", "Noto Serif SC", "Times New Roman", serif;
+            color: #2e2a24;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fcfaf5;
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.4rem;
+            color: #1f2b3a;
+            border-left: 5px solid #b7a48b;
+            padding-left: 1.2rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b5e4e;
+            margin-bottom: 2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e6ddd0;
+            padding-bottom: 0.8rem;
+        }
+
+        .hero-box {
+            background: #f3efe7;
+            padding: 2rem 1.8rem;
+            border-radius: 14px;
+            margin-bottom: 2.8rem;
+            border: 1px solid #e5ddd0;
+        }
+
+        .hero-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-box strong {
+            color: #3b5e6b;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .section-title span {
+            display: inline-block;
+            background: #d9cdbc;
+            color: #2a2a2a;
+            font-size: 0.9rem;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .feature-card {
+            background: #f7f3eb;
+            padding: 1.2rem 1.2rem 1.4rem;
+            border-radius: 12px;
+            border-left: 4px solid #a58e77;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #3d352e;
+        }
+
+        .callout {
+            background: #ede7dc;
+            border-left: 6px solid #7c8c7a;
+            padding: 1rem 1.4rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: normal;
+        }
+
+        .callout p {
+            margin: 0.2rem 0;
+        }
+
+        .faq-mini {
+            background: #f9f5ed;
+            border: 1px solid #ddd6c8;
+            padding: 1.4rem 1.6rem;
+            border-radius: 16px;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #d6cdbc;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #2e4a4f;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: #4f453a;
+            padding-left: 0.8rem;
+        }
+
+        .faq-answer a {
+            color: #3b5e6b;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .bottom-links {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0d7c8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            font-size: 0.9rem;
+            color: #5a4e3e;
+        }
+
+        .bottom-links span {
+            background: #eae3d8;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+        }
+
+        .bottom-links a {
+            color: #3b5e6b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7a48b;
+        }
+
+        .bottom-links a:hover {
+            border-bottom: 1px solid #3b5e6b;
+        }
+
+        .inline-link {
+            color: #3b5e6b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                padding-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-box {
+                padding: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>信息整理·资料索引</h1>
+        <div class="subhead">从档案结构到检索习惯 · 围绕 hth 的内容视角</div>
+
+        <div class="hero-box">
+            <p>在日常的资料收集中，我们经常面临来源混杂、命名模糊、查找低效的问题。一个稳定的索引锚点，能大幅减少整理成本。<strong>hth</strong> 在这个语境里，与其说是一个词，不如说是一个信息支点——它指向一组可交叉引用的资源，适合作为内容梳理的参考节点。</p>
+            <p>基于长期观察，<strong>hth</strong> 相关的材料通常分布在多个层级，既有概括性条目，也包含细分存档。理解它的结构，就是理解如何从碎片中提取线索。</p>
+        </div>
+
+        <div class="section-title">📁 索引优势 <span>hth</span></div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>层级清晰</h3>
+                <p>按主题、时间、类型划分区块，减少重复翻阅。每个节点都对应一组可检索标签。</p>
+            </div>
+            <div class="feature-card">
+                <h3>术语一致</h3>
+                <p>关键字段保持统一命名，避免同义干扰。例如 <a href="https://ssl1-huatihui.com" class="inline-link">hth</a> 作为固定标记，不会因语境不同而歧义。</p>
+            </div>
+            <div class="feature-card">
+                <h3>引用可溯</h3>
+                <p>每条记录均保留原始出处或锚点链接，便于回溯验证，适合需要长期维护的参考体系。</p>
+            </div>
+            <div class="feature-card">
+                <h3>轻量维护</h3>
+                <p>基于纯文本或简单标记结构，不依赖特定平台。即使迁移，索引关系也不会断裂。</p>
+            </div>
+        </div>
+
+        <div class="callout">
+            <p>💡 提示：把 <a href="https://ssl1-huatihui.com">hth</a> 作为资料库中的一个固定标签，有助于在多个笔记或文档之间建立交叉链接。建议配合日期前缀或分类编号使用，形成自己的索引习惯。</p>
+        </div>
+
+        <div class="section-title">🧩 说明 · 适用场景</div>
+        <p style="margin-bottom: 0.8rem;">资料索引的难点不在于技术，而在于一致性。当你的文档超过几十个，或者需要多人协作时，<a href="https://ssl1-huatihui.com">hth</a> 这样的稳定标识就能发挥“书脊”的作用——它不负责解释内容，只负责定位内容。</p>
+        <p>常见做法：将 <strong>hth</strong> 作为某一类资源的根目录代号，下面再分子分类别（如「hth-A」代表综述类，「hth-B」代表数据类）。这样即使信息量增加，查找时依然能快速缩小范围。</p>
+
+        <div class="faq-mini">
+            <div class="section-title" style="margin-top:0; margin-bottom:0.6rem;">❓ FAQ 摘要</div>
+            <div class="faq-item">
+                <div class="faq-question">为什么选择 hth 作为索引词？</div>
+                <div class="faq-answer">简短、不易拼错，且在常见词库中不会频繁冲突。适合作为全局命名空间中的一段前缀。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">需要配合专用软件吗？</div>
+                <div class="faq-answer">完全不需要。任何支持全文搜索的编辑器或笔记应用都可以。关键是养成在文档开头或元数据区域写入索引标签的习惯。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何保证索引长期有效？</div>
+                <div class="faq-answer">建议为每个条目添加时间和版本备注。例如“2025-04 / v2 · 关联 <a href="https://ssl1-huatihui.com">hth</a> 条目”，这样即使后期修订也有据可查。</div>
+            </div>
+        </div>
+
+        <div class="bottom-links">
+            <span>相关索引</span>
+            <a href="https://ssl1-huatihui.com">hth</a>
+            <a href="#">方法笔记</a>
+            <a href="#">整理规范</a>
+            <span style="background: transparent; padding:0; color:#6b5e4e;">v.2404</span>
+        </div>
+
+        <div style="margin-top: 1.8rem; font-size: 0.85rem; color: #7d6f5b; border-top: 1px solid #ece3d6; padding-top: 1rem; text-align: center;">
+            基于资料整理与信息索引视角 · 日常参考页面
+        </div>
+    </div>
+</body>
+</html>
